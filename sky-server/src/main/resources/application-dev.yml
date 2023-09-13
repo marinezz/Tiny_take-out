@@ -10,4 +10,4 @@ sky:
     endpoint: oss-cn-chengdu.aliyuncs.com
     bucket-name: tiny-take-out
     access-key-id: LTAI5t8JXjS3zQ3iC9bCAxkN
-    access-key-secret: J3OLwq8f8okiW92lBUzug4s445akzG
+    access-key-secret: secret
