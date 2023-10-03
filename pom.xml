@@ -16,6 +16,13 @@
         <module>sky-common</module>
         <module>sky-pojo</module>
         <module>sky-server</module>
+        <module>Tiny_take-out-common</module>
+        <module>Tiny_take-out-common</module>
+        <module>Tiny_take-out-common</module>
+        <module>Tiny_take-out-feign-api</module>
+        <module>Tiny_take-out-model</module>
+        <module>Tiny_take-out-service</module>
+        <module>Tiny_take-out-getway</module>
     </modules>
     <properties>
         <mybatis.spring>2.2.0</mybatis.spring>
