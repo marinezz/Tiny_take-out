@@ -1,0 +1,62 @@
+server:
+  port: 20001
+
+spring:
+  application:
+    name: take-out-user-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+    gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedHeaders: "*"
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+              - OPTION
+      routes:
+        - id: user
+          uri: lb://take-out-user
+          predicates:
+            - Path=/user/user/**
+        - id: category
+          uri: lb://take-out-dish
+          predicates:
+            - Path=/user/category/**
+        - id: dish
+          uri: lb://take-out-dish
+          predicates:
+            - Path=/user/dish/**
+        - id: setmeal
+          uri: lb://take-out-dish
+          predicates:
+            - Path=/user/setmeal/**
+
+
+
+sky:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: itcast
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
+    # 设置用户端的JWT属性
+    user-secret-key: itheima
+    user-ttl: 7200000
+    user-token-name: authentication
+
+

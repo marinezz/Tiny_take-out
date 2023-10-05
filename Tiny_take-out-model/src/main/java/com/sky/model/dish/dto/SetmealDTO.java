@@ -1,6 +1,6 @@
 package com.sky.model.dish.dto;
 
-import com.sky.entity.SetmealDish;
+import com.sky.model.dish.entity.SetmealDish;
 import lombok.Data;
 
 import java.io.Serializable;
