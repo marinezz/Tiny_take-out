@@ -62,4 +62,11 @@ public interface DishService {
      * @return
      */
     List<DishVO> listWithFlavor(Dish dish);
+
+    /**
+     * 根据id获取菜品
+     * @param id
+     * @return
+     */
+    Dish getById(Long id);
 }

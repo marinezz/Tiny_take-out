@@ -27,10 +27,11 @@ spring:
               - PUT
               - OPTION
       routes:
-        - id: user
+        - id: employee
           uri: lb://take-out-admin
           predicates:
             - Path=/admin/employee/**
+
         - id: category
           uri: lb://take-out-dish
           predicates:
@@ -43,6 +44,11 @@ spring:
           uri: lb://take-out-dish
           predicates:
             - Path=/admin/setmeal/**
+
+        - id: order
+          uri: lb://take-out-order
+          predicates:
+            - Path=/admin/order/**
 
 sky:
   jwt:

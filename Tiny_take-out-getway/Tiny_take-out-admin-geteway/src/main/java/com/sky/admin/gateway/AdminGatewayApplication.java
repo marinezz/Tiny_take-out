@@ -1,4 +1,4 @@
-package com.sky;
+package com.sky.admin.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,10 +10,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class UserGatewayApplication
+public class AdminGatewayApplication
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(UserGatewayApplication.class,args);
+        SpringApplication.run(AdminGatewayApplication.class,args);
     }
 }

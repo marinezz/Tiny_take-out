@@ -31,6 +31,11 @@ spring:
           uri: lb://take-out-user
           predicates:
             - Path=/user/user/**
+        - id: addressBook
+          uri: lb://take-out-user
+          predicates:
+            - Path=/user/addressBook/**
+
         - id: category
           uri: lb://take-out-dish
           predicates:
@@ -43,6 +48,15 @@ spring:
           uri: lb://take-out-dish
           predicates:
             - Path=/user/setmeal/**
+
+        - id: order
+          uri: lb://take-out-order
+          predicates:
+            - Path=/user/order/**
+        - id: shoppingCart
+          uri: lb://take-out-order
+          predicates:
+            - Path=/user/shoppingCart/**
 
 
 

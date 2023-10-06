@@ -65,4 +65,11 @@ public interface SetmealService {
      * @return
      */
     List<DishItemVO> getDishItemById(Long id);
+
+    /**
+     * 根据id获取套餐
+     * @param id
+     * @return
+     */
+    Setmeal getById(Long id);
 }

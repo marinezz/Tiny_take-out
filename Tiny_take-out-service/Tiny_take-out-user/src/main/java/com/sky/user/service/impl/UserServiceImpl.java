@@ -62,6 +62,16 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
+     * 通过id获取用户
+     * @param id
+     * @return
+     */
+    @Override
+    public User getById(Long id) {
+        return userMapper.getById(id);
+    }
+
+    /**
      * 通过微信授权码获取openid
      * @param code
      * @return

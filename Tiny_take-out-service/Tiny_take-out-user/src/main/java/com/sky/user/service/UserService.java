@@ -11,4 +11,6 @@ public interface UserService {
      * @return
      */
     User wxLogin(UserLoginDTO userLoginDTO);
+
+    User getById(Long id);
 }

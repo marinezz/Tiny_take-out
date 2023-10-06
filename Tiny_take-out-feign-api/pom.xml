@@ -18,11 +18,18 @@
     </properties>
 
     <dependencies>
+        <!--内部依赖工程-->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <artifactId>Tiny_take-out-common</artifactId>
+            <groupId>com.sky</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>Tiny_take-out-model</artifactId>
+            <groupId>com.sky</groupId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 </project>
