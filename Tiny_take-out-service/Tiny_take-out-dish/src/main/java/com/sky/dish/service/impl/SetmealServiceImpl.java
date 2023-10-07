@@ -25,6 +25,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class SetmealServiceImpl implements SetmealService {
@@ -192,5 +193,15 @@ public class SetmealServiceImpl implements SetmealService {
     @Override
     public Setmeal getById(Long id) {
         return setmealMapper.getById(id);
+    }
+
+    /**
+     * 获取套餐数量
+     * @param map
+     * @return
+     */
+    @Override
+    public Integer countByMap(Map map) {
+        return setmealMapper.countByMap(map);
     }
 }

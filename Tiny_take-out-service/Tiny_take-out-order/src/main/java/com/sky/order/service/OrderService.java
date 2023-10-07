@@ -8,6 +8,10 @@ import com.sky.model.order.vo.OrderStatisticsVO;
 import com.sky.model.order.vo.OrderSubmitVO;
 import com.sky.model.order.vo.OrderVO;
 
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
+
 
 public interface OrderService {
 
@@ -108,4 +112,26 @@ public interface OrderService {
      * @param id
      */
     void reminder(Long id);
+
+    /**
+     * 获取指定时间营业额
+     * @param map
+     * @return
+     */
+    Double sumByMap(Map map);
+
+    /**
+     * 获取指定时间内的排名前10
+     * @param beginTime
+     * @param endTime
+     * @return
+     */
+    List<GoodsSalesDTO> getSalesTop10(LocalDateTime beginTime, LocalDateTime endTime);
+
+    /**
+     * 获取订单数量
+     * @param map
+     * @return
+     */
+    Integer countByMap(Map map);
 }

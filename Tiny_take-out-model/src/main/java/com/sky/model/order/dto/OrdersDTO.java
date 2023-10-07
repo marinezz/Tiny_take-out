@@ -1,6 +1,7 @@
 package com.sky.model.order.dto;
 
-import com.sky.entity.OrderDetail;
+
+import com.sky.model.order.entity.OrderDetail;
 import lombok.Data;
 
 import java.io.Serializable;

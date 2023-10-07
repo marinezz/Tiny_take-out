@@ -72,6 +72,16 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
+     * 根据条件查询用户
+     * @param map
+     * @return
+     */
+    @Override
+    public Integer countByMap(Map map) {
+        return userMapper.countByMap(map);
+    }
+
+    /**
      * 通过微信授权码获取openid
      * @param code
      * @return

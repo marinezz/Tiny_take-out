@@ -10,6 +10,7 @@ import com.sky.model.dish.vo.DishItemVO;
 import com.sky.model.dish.vo.SetmealVO;
 
 import java.util.List;
+import java.util.Map;
 
 
 public interface SetmealService {
@@ -72,4 +73,11 @@ public interface SetmealService {
      * @return
      */
     Setmeal getById(Long id);
+
+    /**
+     * 获取套餐数量
+     * @param map
+     * @return
+     */
+    Integer countByMap(Map map);
 }

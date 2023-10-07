@@ -10,7 +10,7 @@ import com.sky.model.admin.entity.Employee;
 import com.sky.model.admin.dto.EmployeeDTO;
 import com.sky.model.admin.dto.EmployeeLoginDTO;
 import com.sky.model.admin.dto.EmployeePageQueryDTO;
-import com.sky.vo.EmployeeLoginVO;
+import com.sky.model.admin.vo.EmployeeLoginVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

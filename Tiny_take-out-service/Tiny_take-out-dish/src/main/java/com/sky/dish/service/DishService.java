@@ -8,6 +8,7 @@ import com.sky.model.dish.entity.Dish;
 import com.sky.model.dish.vo.DishVO;
 
 import java.util.List;
+import java.util.Map;
 
 public interface DishService {
     /**
@@ -69,4 +70,11 @@ public interface DishService {
      * @return
      */
     Dish getById(Long id);
+
+    /**
+     * 获取菜品数量
+     * @param map
+     * @return
+     */
+    Integer countByMap(Map map);
 }

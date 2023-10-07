@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "take-out-user",path = "/feign")
 public interface IAddressBookClient {
 
+    /**
+     * 根据id获取地址信息
+     * @param id
+     * @return
+     */
     @GetMapping("/addressBook/{id}")
     AddressBook getById(@PathVariable Long id);
 }

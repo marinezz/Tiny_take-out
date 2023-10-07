@@ -1,4 +1,4 @@
-package com.sky.model.dish.vo;
+package com.sky.model.admin.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

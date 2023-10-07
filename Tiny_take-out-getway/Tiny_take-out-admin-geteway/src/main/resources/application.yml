@@ -31,6 +31,15 @@ spring:
           uri: lb://take-out-admin
           predicates:
             - Path=/admin/employee/**
+        - id: employee
+          uri: lb://take-out-admin
+          predicates:
+            - Path=/admin/report/**
+        - id: employee
+          uri: lb://take-out-admin
+          predicates:
+            - Path=/admin/workspace/**
+
 
         - id: category
           uri: lb://take-out-dish

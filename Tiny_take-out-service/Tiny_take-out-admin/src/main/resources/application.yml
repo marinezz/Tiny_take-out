@@ -15,6 +15,7 @@ spring:
         file-extension: yml
   main:
     allow-circular-references: true   # 允许循环依赖
+    allow-bean-definition-overriding: true
   datasource:
     druid:
       driver-class-name: ${sky.datasource.driver-class-name}

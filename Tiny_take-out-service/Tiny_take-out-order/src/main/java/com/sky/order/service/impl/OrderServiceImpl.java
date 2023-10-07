@@ -15,12 +15,12 @@ import com.sky.common.exception.ShoppingCartBusinessException;
 import com.sky.common.result.PageResult;
 import com.sky.common.utils.HttpClientUtil;
 import com.sky.common.utils.WeChatPayUtil;
+import com.sky.model.order.vo.OrderStatisticsVO;
 import com.sky.order.websocket.WebSocketServer;
 import com.sky.model.order.dto.*;
 import com.sky.model.order.entity.OrderDetail;
 import com.sky.model.order.entity.Orders;
 import com.sky.model.order.vo.OrderPaymentVO;
-import com.sky.model.order.vo.OrderStatisticsVO;
 import com.sky.model.order.vo.OrderSubmitVO;
 import com.sky.model.order.vo.OrderVO;
 import com.sky.model.user.entirty.AddressBook;
@@ -483,6 +483,37 @@ public class OrderServiceImpl implements OrderService {
 
         String jsonString = JSON.toJSONString(map);
         webSocketServer.sendToAllClient(jsonString);
+    }
+
+    /**
+     * 获取指定时间营业额
+     * @param map
+     * @return
+     */
+    @Override
+    public Double sumByMap(Map map) {
+        return orderMapper.sumByMap(map);
+    }
+
+    /**
+     * 获取指定时间内的排名前10
+     * @param beginTime
+     * @param endTime
+     * @return
+     */
+    @Override
+    public List<GoodsSalesDTO> getSalesTop10(LocalDateTime beginTime, LocalDateTime endTime) {
+        return orderMapper.getSalesTop10(beginTime,endTime);
+    }
+
+    /**
+     * 获取订单数量
+     * @param map
+     * @return
+     */
+    @Override
+    public Integer countByMap(Map map) {
+        return orderMapper.countByMap(map);
     }
 
     /**
