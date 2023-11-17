@@ -1,5 +1,6 @@
 package com.sky.model.admin.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +15,7 @@ import java.io.Serializable;
 public class UserReportVO implements Serializable {
 
     //日期，以逗号分隔，例如：2022-10-01,2022-10-02,2022-10-03
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private String dateList;
 
     //用户总量，以逗号分隔，例如：200,210,220
