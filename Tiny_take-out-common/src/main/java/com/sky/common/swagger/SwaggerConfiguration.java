@@ -12,23 +12,22 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 @Slf4j
-public class SwaggerUserConfiguration {
+public class SwaggerConfiguration {
     /**
      * 通过knife4j生成接口文档
      * @return
      */
     @Bean
-    public Docket docket1() {
+    public Docket docket() {
         ApiInfo apiInfo = new ApiInfoBuilder()
                 .title("外卖项目接口文档")
                 .version("2.0")
                 .description("外卖项目接口文档")
                 .build();
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
-                .groupName("管理端接口")
                 .apiInfo(apiInfo)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.sky.user"))
+                .apis(RequestHandlerSelectors.basePackage("com.sky"))
                 .paths(PathSelectors.any())
                 .build();
         return docket;

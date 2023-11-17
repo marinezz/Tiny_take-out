@@ -17,7 +17,6 @@
         <module>Tiny_take-out-admin</module>
         <module>Tiny_take-out-dish</module>
         <module>Tiny_take-out-order</module>
-        <module>Tiny_take-out-schedule</module>
     </modules>
 
     <properties>
