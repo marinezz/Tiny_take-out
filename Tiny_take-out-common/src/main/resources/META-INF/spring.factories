@@ -2,4 +2,5 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.sky.common.properties.JwtProperties,\
 com.sky.common.properties.WeChatProperties,\
 com.sky.common.swagger.SwaggerConfiguration,\
-com.sky.common.utils.WeChatPayUtil
+com.sky.common.utils.WeChatPayUtil,\
+com.sky.common.handler.GlobalExceptionHandler

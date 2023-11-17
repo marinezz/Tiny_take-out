@@ -6,6 +6,7 @@ import com.sky.model.dish.entity.Setmeal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
@@ -27,11 +28,12 @@ public class SetmealClient implements ISetmealClient {
     }
 
     /**
-     * 获取套餐数量
+     * 获取套餐数量，异常
      * @param map
      * @return
      */
     @Override
+    @PostMapping("/feign/setmeal/count")
     public Integer countByMap(Map map) {
         return setmealService.countByMap(map);
     }

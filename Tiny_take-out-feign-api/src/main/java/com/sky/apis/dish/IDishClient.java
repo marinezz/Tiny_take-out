@@ -4,6 +4,7 @@ import com.sky.model.dish.entity.Dish;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Map;
@@ -24,6 +25,6 @@ public interface IDishClient {
      * @param map
      * @return
      */
-    @GetMapping("/dish/count")
+    @PostMapping("/dish/count")
     Integer countByMap(@RequestBody Map map);
 }
