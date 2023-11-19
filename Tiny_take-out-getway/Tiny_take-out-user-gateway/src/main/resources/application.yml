@@ -35,6 +35,10 @@ spring:
           uri: lb://take-out-user
           predicates:
             - Path=/user/addressBook/**
+        - id: shop
+          uri: lb://take-out-user
+          predicates:
+            - Path=/user/shop/**
 
         - id: category
           uri: lb://take-out-dish
