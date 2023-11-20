@@ -63,6 +63,14 @@ spring:
           predicates:
             - Path=/admin/order/**
 
+#        - id: websocket_route
+#          uri: lb://take-out-order
+#          predicates:
+#            - Path=/ws/**
+#            - Method=GET
+#            - Header=Upgrade,websocket
+#            - Header=Connection,Upgrade
+
 sky:
   jwt:
     # 设置jwt签名加密时使用的秘钥
